@@ -1,0 +1,17 @@
+.nav-header {
+  background-color: #272727;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+}
+.nav-item {
+  margin-right: 25px;
+  text-decoration: none;
+}
+.nav-link {
+  text-decoration: none;
+}
