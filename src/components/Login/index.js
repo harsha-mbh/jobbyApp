@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import './index.css'
 
@@ -44,12 +45,16 @@ class Login extends Component {
 
   render() {
     const {username, password, showSubmitError, errorMsg} = this.state
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
+    }
     return (
       <div className="login-page-container">
         <div className="login-card">
           <img
             src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-            alt="website-logo"
+            alt="website logo"
             className="website-logo"
           />
           <form className="login-form" onSubmit={this.onSubmitForm}>
