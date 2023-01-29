@@ -11,7 +11,12 @@ const FiltersGroup = props => {
           {employmentTypesList.map(employmentType => (
             <li key={employmentType.employmentTypeId}>
               <input type="checkbox" id={employmentType.employmentTypeId} />
-              <label className="employment-type">{employmentType.label}</label>
+              <label
+                htmlFor={employmentType.employmentTypeId}
+                className="employment-type"
+              >
+                {employmentType.label}
+              </label>
             </li>
           ))}
         </ul>
@@ -27,7 +32,12 @@ const FiltersGroup = props => {
                 id={salaryRange.salaryRangeId}
                 name="salary"
               />
-              <label className="employment-type">{salaryRange.label}</label>
+              <label
+                htmlFor={salaryRange.salaryRangeId}
+                className="employment-type"
+              >
+                {salaryRange.label}
+              </label>
             </li>
           ))}
         </ul>

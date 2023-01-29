@@ -247,12 +247,12 @@ class Jobs extends Component {
                 className="search-input"
                 onChange={this.onChangeSearchInput}
               />
-              <button type="button">
-                <BsSearch
-                  className="search-icon"
-                  testid="searchButton"
-                  onClick={this.onClickSearchBtn}
-                />
+              <button
+                type="button"
+                testid="searchButton"
+                className="search-icon"
+              >
+                <BsSearch onClick={this.onClickSearchBtn} />
               </button>
             </div>
             {this.renderJobDetails()}

@@ -34,7 +34,7 @@ const JobItem = props => {
         </div>
         <hr className="separator" />
         <div className="description-container">
-          <p className="description-heading">Description</p>
+          <h1 className="description-heading">Description</h1>
           <p className="job-description">{jobDescription}</p>
         </div>
       </li>
